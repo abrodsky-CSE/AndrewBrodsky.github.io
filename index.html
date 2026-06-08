@@ -1242,7 +1242,7 @@
 
         // ─── CONTENT PERSISTENCE ────────────────────────────────────────────────────
 
-        const CONTENT_KEY = 'ab-content-v3';
+        const CONTENT_KEY = 'ab-content-v4';
 
         function cleanClone(el) {
             const c = el.cloneNode(true);
@@ -1586,7 +1586,7 @@
 
         // ─── DIMENSIONS ──────────────────────────────────────────────────────────────
 
-        const DIMS_KEY = 'ab-dims';
+        const DIMS_KEY = 'ab-dims-v2';
 
         function saveDims(key, w, h) {
             const d = JSON.parse(localStorage.getItem(DIMS_KEY) || '{}');
