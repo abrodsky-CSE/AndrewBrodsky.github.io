@@ -1177,7 +1177,7 @@
         }
 
         function readFile(file, key) {
-            if (!file ? .type.startsWith('image/')) return;
+            if (!file ?.type.startsWith('image/')) return;
             const r = new FileReader();
             r.onload = e => saveImg(key, e.target.result);
             r.readAsDataURL(file);
@@ -1258,9 +1258,9 @@
                 aboutLeft: get('.about-left'),
                 resumeMain: get('.resume-main'),
                 skillsMain: get('.skills-main'),
-                contactH2: document.querySelector('#contact h2') ? .textContent,
+                contactH2: document.querySelector('#contact h2') ?.textContent,
                 contactP: cleanClone(document.querySelector('#contact > p')).innerHTML,
-                footer: document.querySelector('footer') ? .innerHTML,
+                footer: document.querySelector('footer') ?.innerHTML,
                 loveCards: [...document.querySelectorAll('.drop-zone.love-drop')].map(z => ({
                     key: z.dataset.key,
                     hint: cleanClone(z.querySelector('.drop-hint')).innerHTML
@@ -1278,7 +1278,7 @@
             if (c.contactH2) document.querySelector('#contact h2').textContent = c.contactH2;
             if (c.contactP) document.querySelector('#contact > p').innerHTML = c.contactP;
             if (c.footer) document.querySelector('footer').innerHTML = c.footer;
-            if (c.loveCards ? .length) {
+            if (c.loveCards ?.length) {
                 const grid = document.getElementById('loves-grid');
                 grid.innerHTML = '';
                 c.loveCards.forEach(({
@@ -1740,7 +1740,7 @@
             const chip = e.target.closest('.chip');
             if (!chip) return;
             const src = chip.querySelector('.chip-tip');
-            const txt = src ? .textContent ? .trim();
+            const txt = src ?.textContent ?.trim();
             if (!txt) return;
             tipEl.textContent = txt;
             const r = chip.getBoundingClientRect();
@@ -1752,7 +1752,7 @@
 
         document.addEventListener('mouseout', e => {
             const chip = e.target.closest('.chip');
-            if (chip && !e.relatedTarget ? .closest('.chip')) tipEl.classList.remove('tip-on');
+            if (chip && !e.relatedTarget ?.closest('.chip')) tipEl.classList.remove('tip-on');
         });
 
         document.addEventListener('scroll', () => tipEl.classList.remove('tip-on'), true);
