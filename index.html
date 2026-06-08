@@ -332,6 +332,11 @@
             inset: 0;
         }
         
+        .photo-drop img {
+            object-fit: contain;
+            object-position: center bottom;
+        }
+
         .drop-hint {
             display: flex;
             flex-direction: column;
@@ -384,6 +389,7 @@
         }
         
         .photo-drop {
+            background: transparent;
             aspect-ratio: 4/5;
         }
         
@@ -843,6 +849,7 @@
                 grid-template-columns: 1fr;
             }
             .photo-drop {
+            background: transparent;
                 max-width: 320px;
             }
             .resume-aside {
@@ -890,8 +897,8 @@
                 <span class="tag editable">Class of 2028</span>
             </div>
         </div>
-        <div class="drop-zone photo-drop" data-key="photo">
-            <img src="" alt="Andrew Brodsky">
+        <div class="drop-zone photo-drop has-img" data-key="photo">
+            <img src="images/profile.png" alt="Andrew Brodsky">
             <div class="drop-hint">
                 <span class="dh-icon">🖼️</span>
                 <p>Drop your<br><strong>photo here</strong><br><small style="opacity:.6">or click to browse</small></p>
@@ -1005,8 +1012,8 @@
         <div class="resume-aside">
             <div class="aside-card">
                 <div class="aside-label">Favorite Book</div>
-                <div class="drop-zone book-drop" data-key="book">
-                    <img src="" alt="Favorite Book">
+                <div class="drop-zone book-drop has-img" data-key="book">
+                    <img src="images/sapiens.jpg" alt="Favorite Book">
                     <div class="drop-hint"><span class="dh-icon">📚</span>
                         <p>Drop book<br><strong>cover image</strong></p>
                     </div>
@@ -1015,8 +1022,8 @@
             </div>
             <div class="aside-card">
                 <div class="aside-label">Favorite Film</div>
-                <div class="drop-zone film-drop" data-key="film">
-                    <img src="" alt="Favorite Film">
+                <div class="drop-zone film-drop has-img" data-key="film">
+                    <img src="images/twelve-angry-men.jpg" alt="Favorite Film">
                     <div class="drop-hint"><span class="dh-icon">🎬</span>
                         <p>Drop film<br><strong>poster image</strong></p>
                     </div>
@@ -1086,29 +1093,29 @@
                 </div>
                 <button class="remove-btn">✕</button><button class="love-del-btn">× Remove</button>
             </div>
-            <div class="drop-zone love-drop" data-key="love2">
-                <img src="" alt="">
+            <div class="drop-zone love-drop has-img" data-key="love2">
+                <img src="images/cranberries.jpeg" alt="">
                 <div class="drop-hint"><span class="dh-icon">🎵</span>
                     <p><strong class="editable">The Cranberries</strong><br><span class="editable" style="opacity:.6;font-size:10px">Drop image here</span></p>
                 </div>
                 <button class="remove-btn">✕</button><button class="love-del-btn">× Remove</button>
             </div>
-            <div class="drop-zone love-drop" data-key="love3">
-                <img src="" alt="">
+            <div class="drop-zone love-drop has-img" data-key="love3">
+                <img src="images/hyrox.png" alt="">
                 <div class="drop-hint"><span class="dh-icon">🏋️</span>
                     <p><strong class="editable">HYROX</strong><br><span class="editable" style="opacity:.6;font-size:10px">Drop image here</span></p>
                 </div>
                 <button class="remove-btn">✕</button><button class="love-del-btn">× Remove</button>
             </div>
-            <div class="drop-zone love-drop" data-key="love4">
-                <img src="" alt="">
+            <div class="drop-zone love-drop has-img" data-key="love4">
+                <img src="images/liberty.jpeg" alt="">
                 <div class="drop-hint"><span class="dh-icon">🗽</span>
                     <p><strong class="editable">New York City</strong><br><span class="editable" style="opacity:.6;font-size:10px">Drop image here</span></p>
                 </div>
                 <button class="remove-btn">✕</button><button class="love-del-btn">× Remove</button>
             </div>
-            <div class="drop-zone love-drop" data-key="love5">
-                <img src="" alt="">
+            <div class="drop-zone love-drop has-img" data-key="love5">
+                <img src="images/travel.jpeg" alt="">
                 <div class="drop-hint"><span class="dh-icon">✈️</span>
                     <p><strong class="editable">Travel</strong><br><span class="editable" style="opacity:.6;font-size:10px">Drop image here</span></p>
                 </div>
